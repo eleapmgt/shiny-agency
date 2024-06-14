@@ -6,6 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn start`
+
+export NODE_OPTIONS=--openssl-legacy-provider
+yarn start
+
 ### `npm start`
 
 Runs the app in the development mode.\

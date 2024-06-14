@@ -28,7 +28,9 @@ function Error() {
     <ErrorWrapper>
       <ErrorTitle>Oups...</ErrorTitle>
       <Illustration src={ErrorIllustration} />
-      <ErrorSubtitle>Il semblerait que la page que vous cherchez n’existe pas</ErrorSubtitle>
+      <ErrorSubtitle>
+        Il semblerait que la page que vous cherchez n’existe pas
+      </ErrorSubtitle>
     </ErrorWrapper>
   )
 }
