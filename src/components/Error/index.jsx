@@ -7,17 +7,19 @@ const ErrorWrapper = styled.div`
   margin: 30px;
   display: flex;
   flex-direction: column;
-  background-color: ${colors.backgroundLight};
+  background-color: ${({ theme }) =>
+    theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
   align-items: center;
 `
 
 const ErrorTitle = styled.h1`
+  color: ${({ theme }) => (theme === 'light' ? '#000000' : '#ffffff')};
   font-weight: 300;
 `
 
 const ErrorSubtitle = styled.h2`
+  color: ${({ theme }) => (theme === 'light' ? colors.secondary : '#ffffff')};
   font-weight: 300;
-  color: ${colors.secondary};
 `
 
 const Illustration = styled.img`

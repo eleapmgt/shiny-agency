@@ -11,7 +11,8 @@ const HomeWrapper = styled.div`
 
 const HomerContainer = styled.div`
   margin: 30px;
-  background-color: ${colors.backgroundLight};
+  background-color: ${({ theme }) =>
+    theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
   padding: 60px 90px;
   display: flex;
   flex-direction: row;
@@ -32,6 +33,7 @@ const StyledTitle = styled.h2`
   padding-bottom: 30px;
   max-width: 280px;
   line-height: 50px;
+  color: ${({ theme }) => (theme === 'light' ? '#000000' : '#ffffff')};
 `
 
 const Illustration = styled.img`

@@ -15,9 +15,9 @@ const CardsContainer = styled.div`
 
 const PageTitle = styled.h1`
   font-size: 30px;
-  color: black;
   text-align: center;
   padding-bottom: 30px;
+  color: ${({ theme }) => (theme === 'light' ? '#000000' : '#ffffff')};
 `
 
 const PageSubtitle = styled.h2`
@@ -26,7 +26,9 @@ const PageSubtitle = styled.h2`
   font-weight: 300;
   text-align: center;
   padding-bottom: 30px;
+  color: ${({ theme }) => (theme === 'light' ? '#000000' : '#ffffff')};
 `
+
 const LoaderWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -37,10 +39,11 @@ function Freelances() {
   const { data, isLoading, error } = useFetch(
     `http://localhost:8000/freelances`,
   )
+
   const freelancersList = data?.freelancersList
 
   if (error) {
-    return <span>Il y a un problème</span>
+    return <pre>{error}</pre>
   }
 
   return (
@@ -55,7 +58,7 @@ function Freelances() {
         </LoaderWrapper>
       ) : (
         <CardsContainer>
-          {freelancersList.map((profile, index) => (
+          {freelancersList?.map((profile, index) => (
             <Card
               key={`${profile.name}-${index}`}
               label={profile.job}
