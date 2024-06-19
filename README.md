@@ -19,7 +19,7 @@ yarn run test
 
 ## Homepage preview :
 
-![alt text](Public/homePagePreview.png)
+![alt text](public/homePagePreview.png)
 
 ## Dark Mode preview :
-![alt text](Public/darkModePreview.png)
+![alt text](public/darkModePreview.png)
